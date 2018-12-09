@@ -2,16 +2,6 @@
 using namespace std;
 
 int * merge(int l[], int r[], int sl, int sr){
-    cout << "Sizes of l and r are: " << sl << " " << sr << endl;
-    cout << "Left array is ";
-    for(int i = 0; i < sl; i++){
-      cout << l[i] << " ";
-    }
-    cout << endl << "Right array is ";
-    for(int i =0; i < sr; i++){
-      cout << r[i] << " ";
-    }
-    cout << endl;
     int countl = 0;
     int countr = 0;
     int* out = new int[sl+sr];
@@ -27,8 +17,6 @@ int * merge(int l[], int r[], int sl, int sr){
 }
 
 int* mergesort(int ar[], int s, int e){
-  cout << "Start index is " << s << endl;
-  cout << "End index is " << e << endl;
   if(s==e){
     int* temp = new int[1];
     temp[0] = ar[s];
