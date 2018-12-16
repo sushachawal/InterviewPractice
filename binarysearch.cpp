@@ -2,6 +2,19 @@
 
 using namespace std;
 
+int binarysearch(int ar[], int q, int l);
+
+int main(int argc, const char* argv[]){
+  int size = 6;
+  int arr[] = {1, 5, 7, 9, 12, 14};
+  int pos = binarysearch(arr, atoi(argv[1]), size);
+  if(pos == -1) {
+    cout << "Item Not found" << endl;
+    return 0;
+  }
+  cout << "Item found at position: " << pos << endl;
+}
+
 int binarysearch(int ar[], int q, int l){
   int s = 0;
   int e = l-1;
@@ -14,15 +27,4 @@ int binarysearch(int ar[], int q, int l){
     else e = mid;
   }
   return -1;
-}
-
-int main(int argc, const char* argv[]){
-  int size = 6;
-  int arr[] = {1, 5, 7, 9, 12, 14};
-  int pos = binarysearch(arr, atoi(argv[1]), size);
-  if(pos == -1) {
-    cout << "Item Not found" << endl;
-    return 0;
-  }
-  cout << "Item found at position: " << pos << endl;
 }
